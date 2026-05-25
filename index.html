@@ -10,6 +10,7 @@
             font-family: 'Segoe UI', sans-serif; 
             line-height: 1.6; 
             color: #333; 
+            scroll-behavior: smooth;
         }
         header {
             background: linear-gradient(135deg, #003087, #0052cc);
@@ -31,9 +32,12 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 30px;
+            margin-left: 25px;
             font-weight: 500;
+            transition: 0.3s;
         }
+        nav a:hover { color: #ffcc00; }
+
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,48,135,0.75), rgba(0,48,135,0.75)), url('https://tmupmr.idknet.com/images/header.jpg') center/cover;
@@ -54,8 +58,9 @@
             border-radius: 50px;
             text-decoration: none;
         }
+
         section { 
-            padding: 90px 20px; 
+            padding: 100px 20px; 
             max-width: 1200px; 
             margin: 0 auto; 
         }
@@ -76,17 +81,32 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             text-align: center;
+            transition: 0.3s;
         }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .specialty-icon { font-size: 3rem; margin-bottom: 15px; }
+
+        .admission {
+            background: #f8f9fa;
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
         footer {
             background: #003087;
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         .created-by {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            opacity: 0.8;
+            margin-top: 25px;
+            font-size: 0.95rem;
+            opacity: 0.85;
         }
     </style>
 </head>
@@ -96,23 +116,24 @@
         <div class="header-content">
             <div class="logo">ТМУ ПМР</div>
             <nav>
-                <a href="#">Главная</a>
-                <a href="#">Специальности</a>
-                <a href="#">Поступление</a>
-                <a href="#">Новости</a>
-                <a href="#">Контакты</a>
+                <a href="#home">Главная</a>
+                <a href="#specialties">Специальности</a>
+                <a href="#admission">Поступление</a>
+                <a href="#contacts">Контакты</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Главная -->
+    <section id="home" class="hero">
         <div>
             <h1>Тираспольский<br>Межрегиональный Университет</h1>
             <p>Качественное высшее образование в Приднестровье</p>
-            <a href="#" class="btn">Поступить в 2026</a>
+            <a href="#admission" class="btn">Поступить в 2026</a>
         </div>
     </section>
 
+    <!-- Преимущества -->
     <section>
         <h2>Наши преимущества</h2>
         <div class="cards">
@@ -122,13 +143,80 @@
         </div>
     </section>
 
+    <!-- Специальности -->
+    <section id="specialties" style="background: #f8f9fa;">
+        <h2>Наши специальности</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="specialty-icon">💻</div>
+                <h3>Программист</h3>
+                <p>Разработка ПО, веб-разработка, базы данных</p>
+            </div>
+            <div class="card">
+                <div class="specialty-icon">⚖️</div>
+                <h3>Юрист</h3>
+                <p>Гражданское, уголовное и международное право</p>
+            </div>
+            <div class="card">
+                <div class="specialty-icon">🏦</div>
+                <h3>Банковское дело</h3>
+                <p>Финансы, кредиты, банковские операции</p>
+            </div>
+            <div class="card">
+                <div class="specialty-icon">💊</div>
+                <h3>Фармацевт</h3>
+                <p>Фармацевтическая технология и аптечное дело</p>
+            </div>
+            <div class="card">
+                <div class="specialty-icon">📊</div>
+                <h3>Менеджер</h3>
+                <p>Менеджмент организаций и управление проектами</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Поступление -->
+    <section id="admission">
+        <h2>Поступление 2026</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>📅 Сроки приёма</h3>
+                <p>Июнь — Август 2026 года</p>
+            </div>
+            <div class="card">
+                <h3>📝 Необходимые документы</h3>
+                <p>Аттестат, паспорт, фотографии, мед. справка</p>
+            </div>
+            <div class="card">
+                <h3>🎯 Вступительные испытания</h3>
+                <p>Собеседование / тестирование по специальности</p>
+            </div>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+            <a href="#contacts" class="btn">Подать заявку</a>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" style="background: #f8f9fa;">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <p><strong>Адрес:</strong> г. Тирасполь, пр. Магистральный, 10</p>
+            <p><strong>Телефон приёмной комиссии:</strong> 0(533) 2-60-00</p>
+            <p><strong>Email:</strong> universitet-tmu@mail.ru</p>
+            <p style="margin-top: 30px; font-size: 1.1rem;">
+                Работаем с понедельника по пятницу<br>
+                с 8:00 до 17:00
+            </p>
+        </div>
+    </section>
+
     <footer>
         <p>© 2026 Тираспольский межрегиональный университет</p>
-        <p>г. Тирасполь, пр. Магистральный, 10 • Тел: 0(533) 2-60-00</p>
+        <p>Все права защищены</p>
         <div class="created-by">
             Сайт создан Мирзаян Владиславом
         </div>
     </footer>
-
 </body>
 </html>
