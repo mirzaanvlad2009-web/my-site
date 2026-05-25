@@ -3,95 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Тираспольский Межрегиональный Университет</title>
+    <title>ТМУ ПМР | Тираспольский Межрегиональный Университет</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
         }
         header {
             background: linear-gradient(135deg, #003087, #0052cc);
             color: white;
-            padding: 1rem 0;
             position: fixed;
             width: 100%;
-            top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         .header-content {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 15px 20px;
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
         }
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
+        .logo { font-size: 1.8rem; font-weight: bold; }
         nav a {
             color: white;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 30px;
             font-weight: 500;
         }
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://tmupmr.idknet.com/images/header.jpg') center/cover;
             height: 100vh;
+            background: linear-gradient(rgba(0,48,135,0.75), rgba(0,48,135,0.75)), url('https://tmupmr.idknet.com/images/header.jpg') center/cover;
             display: flex;
             align-items: center;
-            color: white;
             text-align: center;
+            color: white;
             margin-top: 70px;
         }
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.4rem;
-            margin-bottom: 40px;
-        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.5rem; margin-bottom: 40px; }
         .btn {
             background: #ffcc00;
             color: #003087;
-            padding: 15px 35px;
-            font-size: 1.2rem;
+            padding: 16px 40px;
+            font-size: 1.3rem;
             font-weight: bold;
             border-radius: 50px;
             text-decoration: none;
-            display: inline-block;
         }
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        section { 
+            padding: 90px 20px; 
+            max-width: 1200px; 
+            margin: 0 auto; 
         }
-        h2 {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2.5rem;
-            color: #003087;
+        h2 { 
+            text-align: center; 
+            font-size: 2.8rem; 
+            margin-bottom: 50px; 
+            color: #003087; 
         }
-        .info {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
         }
         footer {
             background: #003087;
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
+        }
+        .created-by {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -102,8 +97,8 @@
             <div class="logo">ТМУ ПМР</div>
             <nav>
                 <a href="#">Главная</a>
+                <a href="#">Специальности</a>
                 <a href="#">Поступление</a>
-                <a href="#">Факультеты</a>
                 <a href="#">Новости</a>
                 <a href="#">Контакты</a>
             </nav>
@@ -111,34 +106,28 @@
     </header>
 
     <section class="hero">
-        <div class="hero-content">
+        <div>
             <h1>Тираспольский<br>Межрегиональный Университет</h1>
-            <p>Качественное образование • Современные специальности • Будущее начинается здесь</p>
-            <a href="#" class="btn">Поступить в 2026 году</a>
+            <p>Качественное высшее образование в Приднестровье</p>
+            <a href="#" class="btn">Поступить в 2026</a>
         </div>
     </section>
 
     <section>
-        <h2>Почему выбирают нас?</h2>
-        <div class="info">
-            <div><strong>Лицензированное образование</strong><br>Государственные дипломы</div>
-            <div><strong>Современные специальности</strong><br>IT, Экономика, Право, Педагогика</div>
-            <div><strong>Опытные преподаватели</strong><br>Практики и кандидаты наук</div>
-        </div>
-    </section>
-
-    <section style="background: #f8f9fa;">
-        <h2>Контакты</h2>
-        <div class="info" style="text-align:center; font-size:1.1rem;">
-            <div>г. Тирасполь, пр. Магистральный, 10</div>
-            <div>☎ 0(533) 2-60-00 — Приёмная комиссия</div>
-            <div>✉ universitet-tmu@mail.ru</div>
+        <h2>Наши преимущества</h2>
+        <div class="cards">
+            <div class="card"><h3>🏛 Государственная лицензия</h3><p>Официальные дипломы</p></div>
+            <div class="card"><h3>💻 Современные специальности</h3><p>IT, экономика, юриспруденция</p></div>
+            <div class="card"><h3>👨‍🏫 Опытные преподаватели</h3><p>Практики и кандидаты наук</p></div>
         </div>
     </section>
 
     <footer>
         <p>© 2026 Тираспольский межрегиональный университет</p>
-        <p>Все права защищены</p>
+        <p>г. Тирасполь, пр. Магистральный, 10 • Тел: 0(533) 2-60-00</p>
+        <div class="created-by">
+            Сайт создан Мирзаян Владиславом
+        </div>
     </footer>
 
 </body>
